@@ -1,22 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Last Commit Date</title>
-    <script>
-        async function fetchLastCommitDate() {
-            const response = await fetch('https://api.github.com/repos/sadouxm-bit/last-updated/commits');
-            const commits = await response.json();
-            const lastCommit = commits[0];
-            const lastCommitDate = lastCommit.commit.committer.date;
-            document.getElementById('commit-date').innerText = `Last Commit Date: ${new Date(lastCommitDate).toUTCString()}`;
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20%;
         }
-        window.onload = fetchLastCommitDate;
-    </script>
+        h1 {
+            font-size: 2.5em;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the Last Updated Repository</h1>
-    <p id="commit-date">Fetching last commit date...</p>
+    <h1>Page Last Updated: 2026-03-19 19:29:37</h1>
 </body>
 </html>
